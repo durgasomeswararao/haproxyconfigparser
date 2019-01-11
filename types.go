@@ -43,6 +43,7 @@ type Frontend struct {
 	Bind        Bind          `json:"bind"`
 	Acls        []*Acl        `json:"acls"`
 	UseBackends []*UseBackend `json:"use_backends"`
+	DefaultBackend string	 `json:"default_backend"`
 }
 
 type Server struct {
