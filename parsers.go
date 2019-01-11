@@ -155,6 +155,10 @@ func (self *FrontendParser) Parse(node string, options []string, enable bool) er
 			Name:      options[0],
 			Condition: bq,
 		})
+	case "default_backend":
+		if len(options)>=1{
+			self.Frontend.DefaultBackend = options[0]
+		}
 	}
 	return nil
 }
